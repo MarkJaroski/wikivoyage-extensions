@@ -20,38 +20,38 @@ if( !defined( 'MEDIAWIKI' ) ){
 
 $wgExtensionCredits['parserhook'][] = array(
 	'path'           => __FILE__,
-	'name'           => 'Carrousel',
+	'name'           => 'Carousel',
     'author'         => '', # XXX
 	'url'            => '', # XXX
 );
 
-$wgHooks['ParserFirstCallInit'][] = "wfCarrouselSetHook";
+$wgHooks['ParserFirstCallInit'][] = "wfCarouselSetHook";
 
-$wgResourceModules['ext.Carrousel'] = array(
-    'styles' => 'Carrousel.css',
+$wgResourceModules['ext.Carousel'] = array(
+    'styles' => 'Carousel.css',
     'localBasePath' => __DIR__,
-    'remoteExtPath' => 'Carrousel',
+    'remoteExtPath' => 'Carousel',
 );
 
 $wgResourceLoaderDebug = true;
 
-function wfCarrouselSetHook( Parser $parser ) {
-	$parser->setHook( 'carrousel', 'wfCarrouselRender' );
+function wfCarouselSetHook( Parser $parser ) {
+	$parser->setHook( 'carousel', 'wfCarouselRender' );
     $parser->setHook( 'banner', 'wfBannerRender' );
 	return true;
 }
 
-function wfCarrouselRender() {
+function wfCarouselRender() {
     global $wgOut;
-    $wgOut->addModules('ext.Carrousel');
-    $html = "<div class='carrousel'>";
+    $wgOut->addModules('ext.Carousel');
+    $html = "<div class='carousel'>";
     $html .= "</div>";
     return($html);
 }
 
 function wfBannerRender( $input, array $args, Parser $parser, PPFrame $frame ) {
     global $wgOut;
-    $wgOut->addModules('ext.Carrousel');
+    $wgOut->addModules('ext.Carousel');
     $direction = $args['direction'];
     $title = $args['title'];
     $html = "<div class='banner-image'>";
