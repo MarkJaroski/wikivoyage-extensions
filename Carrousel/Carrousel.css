@@ -1,0 +1,66 @@
+
+.banner-image {
+    overflow: hidden;
+}
+
+.banner-box {
+    position: absolute;
+    z-index: 2;
+    margin-top: 6em;
+    color: white;
+    font-weight: bold;
+    width: 50%;
+}
+
+.banner-box-wide {
+    width: 80%
+}
+
+.banner-box-left {
+    left: 5%;
+    text-align: left;
+}
+
+.banner-box-right {
+    right: 5%;
+    text-align: right;
+}
+
+.banner-box-welcome {
+    left: 5%;
+    text-align: center;
+    width: 60%;
+    white-space: nowrap;
+}
+
+.banner-box a,p {
+    color: white;
+}
+
+.banner-box a.name {
+    font-size: 225%;
+    white-space: nowrap;
+}
+
+.banner-box a.type {
+    font-size: 150%;
+}
+
+.banner-box a.quote {
+    font-size: 125%;
+}
+
+.banner-box .welcome {
+    font-size: 300%;
+}
+
+.banner-box .welcome-sub {
+    font-size: 100%;
+    margin-top: 1em;
+}
+
+.banner-box .welcome-map-nav {
+    font-size: 175%;
+    margin-top: 1em;
+}
+
