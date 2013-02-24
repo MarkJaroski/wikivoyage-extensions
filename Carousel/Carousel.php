@@ -28,7 +28,7 @@ $wgExtensionCredits['parserhook'][] = array(
 $wgHooks['ParserFirstCallInit'][] = "wfCarouselSetHook";
 $wgHooks['BeforePageDisplay'][] = 'wfCarouselBeforePageDisplay';
 
-$wgResourceModules['ext.Carousel'] = array(
+$wgResourceModules['ext.wv.carousel'] = array(
     'styles' => array('Carousel.css'),
     'localBasePath' => dirname(__FILE__),
     'remoteExtPath' => '/extensions/Carousel',
@@ -64,7 +64,8 @@ function wfBannerRender( $input, array $args, Parser $parser, PPFrame $frame ) {
 }
 
 function wfCarouselBeforePageDisplay($out, $skin) {
-    $out->addModuleStyles('ext.Carousel');
+    // FIXME we should only load this when absolutely necessary
+    $out->addModuleStyles('ext.wv.carousel');
     return true;
 }
 
