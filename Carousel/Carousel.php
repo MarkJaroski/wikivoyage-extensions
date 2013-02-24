@@ -54,11 +54,13 @@ function wfBannerRender( $input, array $args, Parser $parser, PPFrame $frame ) {
     $image = $args['img'];
     $out  = "<div class='banner-image'>";
     $out .= "<div class='banner-box banner-box-$direction'>";
-    $out .= "<span class='name'>$title</span><br />";
+    // XXX better alignment for these
+    $out .= "<span class='name'>$title</span><br />"; # FIXME, should do the line-break with CSS
     $out .= "<span class='type'>$section</span><br />";
     $out .= "<span class='quote'>$input</span><br />";
     $out .= "</div>"; // banner-box
     $out .= "<a href='' title='$title'>";
+    // XXX incorporate Nicolas' shifting image size trick
     $out .= $parser->recursiveTagParse("[[File:$image|frameless|1000px|link=$title|$title]]");
     $out .= "</a>";
     $out .= "</div>"; // banner-image
