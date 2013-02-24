@@ -26,14 +26,14 @@ $wgExtensionCredits['parserhook'][] = array(
 );
 
 $wgHooks['ParserFirstCallInit'][] = "wfCarouselSetHook";
+$wgHooks['BeforePageDisplay'][] = 'wfCarouselBeforePageDisplay';
 
 $wgResourceModules['ext.Carousel'] = array(
-    'styles' => 'Carousel.css',
-    'localBasePath' => __DIR__,
-    'remoteExtPath' => 'Carousel',
+    'styles' => array('Carousel.css'),
+    'localBasePath' => dirname(__FILE__),
+    'remoteExtPath' => '/extensions/Carousel',
+    'position' => 'top',
 );
-
-$wgResourceLoaderDebug = true;
 
 function wfCarouselSetHook( Parser $parser ) {
 	$parser->setHook( 'carousel', 'wfCarouselRender' );
@@ -42,19 +42,15 @@ function wfCarouselSetHook( Parser $parser ) {
 }
 
 function wfCarouselRender() {
-    global $wgOut;
-    $wgOut->addModules('ext.Carousel');
     $html = "<div class='carousel'>";
     $html .= "</div>";
     return($html);
 }
 
 function wfBannerRender( $input, array $args, Parser $parser, PPFrame $frame ) {
-    global $wgOut;
-    $wgOut->addModules('ext.Carousel');
     $direction = $args['direction'];
     $title = $args['title'];
-    $html = "<div class='banner-image'>";
+    $html  = "<div class='banner-image'>";
     $html .= "<div class='banner-box banner-box-$direction'>";
     $html .= "<span class='name'>$title</span>";
     $html .= "<span class='type'></span>";
@@ -65,5 +61,10 @@ function wfBannerRender( $input, array $args, Parser $parser, PPFrame $frame ) {
     $html .= "</div>";
     $html .= "</div>";
     return($html);
+}
+
+function wfCarouselBeforePageDisplay($out, $skin) {
+    $out->addModuleStyles('ext.Carousel');
+    return true;
 }
 
