@@ -50,17 +50,19 @@ function wfCarouselRender() {
 function wfBannerRender( $input, array $args, Parser $parser, PPFrame $frame ) {
     $direction = $args['direction'];
     $title = $args['title'];
-    $html  = "<div class='banner-image'>";
-    $html .= "<div class='banner-box banner-box-$direction'>";
-    $html .= "<span class='name'>$title</span>";
-    $html .= "<span class='type'></span>";
-    $html .= "<span class='quote'></span>";
-    $html .= "<a href='' title='$title'>";
-    $html .= "<img src='' alt='$title'/>";
-    $html .= "</a>";
-    $html .= "</div>";
-    $html .= "</div>";
-    return($html);
+    $section = $args['section'];
+    $image = $args['img'];
+    $out  = "<div class='banner-image'>";
+    $out .= "<div class='banner-box banner-box-$direction'>";
+    $out .= "<span class='name'>$title</span><br />";
+    $out .= "<span class='type'>$section</span><br />";
+    $out .= "<span class='quote'>$input</span><br />";
+    $out .= "</div>"; // banner-box
+    $out .= "<a href='' title='$title'>";
+    $out .= $parser->recursiveTagParse("[[File:$image|frameless|1000px|link=$title|$title]]");
+    $out .= "</a>";
+    $out .= "</div>"; // banner-image
+    return array($out, 'noparse' => false);
 }
 
 function wfCarouselBeforePageDisplay($out, $skin) {

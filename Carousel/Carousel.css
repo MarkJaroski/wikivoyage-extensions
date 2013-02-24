@@ -37,16 +37,16 @@
     color: white;
 }
 
-.banner-box a.name {
+.banner-box span.name {
     font-size: 225%;
     white-space: nowrap;
 }
 
-.banner-box a.type {
+.banner-box span.type {
     font-size: 150%;
 }
 
-.banner-box a.quote {
+.banner-box span.quote {
     font-size: 125%;
 }
 
