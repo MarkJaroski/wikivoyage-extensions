@@ -48,6 +48,7 @@ function wfCarouselRender() {
 }
 
 function wfBannerRender( $input, array $args, Parser $parser, PPFrame $frame ) {
+    // XXX add the pop-up boxes
     $direction = $args['direction'];
     $title = $args['title'];
     $section = $args['section'];
