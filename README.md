@@ -4,14 +4,6 @@ wikivoyage-extensions
 Extensions for Mediawiki which are mainly intended for use the the
 Wikivoyage travel site.
 
-TODO
-=====================
-
-* Use resource loader to load CSS only when required
-* Finish banner layout implementation
-* Implement HTML/CSS for carousel
-* Implement geo-navigation banner
-
 
 Goals
 =====================
@@ -25,4 +17,12 @@ Goals
 * to give editors the final decision on what to include from user feedback
   in listings
 
+
+TODO
+=====================
+
+* Use resource loader to load CSS only when required
+* Finish banner layout implementation
+* Implement HTML/CSS for carousel
+* Implement geo-navigation banner
 
