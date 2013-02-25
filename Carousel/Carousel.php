@@ -67,7 +67,11 @@ function wfBannerRender( $input, array $args, Parser $parser, PPFrame $frame ) {
     $out .= "</div>";
 
     $out .= "<div class='type'>";
-    $out .= $parser->recursiveTagParse("[[$section_link|$section]]");
+    if ($section_link) {
+        $out .= $parser->recursiveTagParse("[[$section_link|$section]]");
+    } else {
+        $out .= $section;
+    }
     $out .= "</div>";
 
     $out .= "<div class='quote'>";
