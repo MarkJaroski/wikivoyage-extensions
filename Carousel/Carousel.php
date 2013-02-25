@@ -48,23 +48,41 @@ function wfCarouselRender() {
 }
 
 function wfBannerRender( $input, array $args, Parser $parser, PPFrame $frame ) {
-    // XXX add the pop-up boxes
+
+    // Gather the data
     $direction = $args['direction'];
     $title = $args['title'];
     $section = $args['section'];
+    $section_link = $args['section-link'];
     $image = $args['img'];
+
+    // Build the output
     $out  = "<div class='banner-image'>";
+
     $out .= "<div class='banner-box banner-box-$direction'>";
+
     // XXX better alignment for these
-    $out .= "<span class='name'>$title</span><br />"; # FIXME, should do the line-break with CSS
-    $out .= "<span class='type'>$section</span><br />";
-    $out .= "<span class='quote'>$input</span><br />";
+    $out .= "<div class='name'>"; 
+    $out .= $parser->recursiveTagParse("[[$title]]");
+    $out .= "</div>";
+
+    $out .= "<div class='type'>";
+    $out .= $parser->recursiveTagParse("[[$section_link|$section]]");
+    $out .= "</div>";
+
+    $out .= "<div class='quote'>";
+    $out .= $parser->recursiveTagParse("[[$title|$input]]");
+    $out .= "</div>";
+
     $out .= "</div>"; // banner-box
-    $out .= "<a href='' title='$title'>";
+
     // XXX incorporate Nicolas' shifting image size trick
+    $out .= "<a href='' title='$title'>";
     $out .= $parser->recursiveTagParse("[[File:$image|frameless|1000px|link=$title|$title]]");
     $out .= "</a>";
+
     $out .= "</div>"; // banner-image
+
     return array($out, 'noparse' => false);
 }
 

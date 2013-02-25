@@ -6,7 +6,7 @@
 .banner-box {
     position: absolute;
     z-index: 2;
-    margin-top: 6em;
+    margin-top: 4em;
     color: white;
     font-weight: bold;
     width: 50%;
@@ -33,21 +33,23 @@
     white-space: nowrap;
 }
 
-.banner-box a,p {
-    color: white;
+.banner-box a {
+    color: white !important;
 }
 
-.banner-box span.name {
+.banner-box .name {
     font-size: 225%;
     white-space: nowrap;
 }
 
-.banner-box span.type {
+.banner-box .type {
     font-size: 150%;
+    margin-top: .5em;
 }
 
-.banner-box span.quote {
+.banner-box .quote {
     font-size: 125%;
+    margin-top: .5em;
 }
 
 .banner-box .welcome {
