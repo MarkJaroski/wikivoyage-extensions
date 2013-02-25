@@ -1,6 +1,9 @@
 
 .banner-image {
     overflow: hidden;
+    background-color: #666666;
+    height: 340px; /* FIXME should be dynamic */
+    margin-bottom: .6em;
 }
 
 .banner-box {
