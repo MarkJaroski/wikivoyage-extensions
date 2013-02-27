@@ -2,8 +2,15 @@
 .banner-image {
     overflow: hidden;
     background-color: #666666;
-    height: 250px; /* FIXME should be dynamic */
+    max-height: 250px;
+    height: auto;
     margin-bottom: .6em;
+}
+
+.banner-image img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9;
 }
 
 .banner-box {
