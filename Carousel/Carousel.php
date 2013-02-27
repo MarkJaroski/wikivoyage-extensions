@@ -82,7 +82,7 @@ function wfBannerRender( $input, array $args, Parser $parser, PPFrame $frame ) {
 
     // XXX incorporate Nicolas' shifting image size trick
     $out .= "<a href='' title='$title'>";
-    $out .= $parser->recursiveTagParse("[[File:$image|frameless|1000px|link=$title|$title]]");
+    $out .= $parser->recursiveTagParse("[[File:$image|frameless|1700px|link=$title|$title]]");
     $out .= "</a>";
 
     $out .= "</div>"; // banner-image
