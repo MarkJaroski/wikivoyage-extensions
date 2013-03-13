@@ -61,11 +61,20 @@ function wfCarouselRender() {
     return($html);
 }
 
-function wfMapBannerRender( $imagemap, array $args, Parser $parser, PPFrame $frame ) {
+function wfMapBannerRender( $text, array $args, Parser $parser, PPFrame $frame ) {
+    $welcome = $parser->recursiveTagParse($args['welcome']);
+    $tagline = $parser->recursiveTagParse($args['tagline']);
+    $text    = $parser->recursiveTagParse($text);
+
     $html = '';
 
     // Build the output
     $html .= "<div class='banner-image'>";
+    $html .= "<div class='banner-box banner-box-welcome'>";
+    $html .= "<div class='welcome'>$welcome</div>";
+    $html .= "<div class='welcome-sub'>$tagline</div>";
+    $html .= "<div class='welcome-map-nav'>$text</div>";
+    $html .= "</div>"; // map-box
     $html .= '<map name="ImageMap_13_116267614" id="ImageMap_13_116267614">';
     $html .= '<area href="/wiki/Antarctica" shape="poly" coords="1673,463,1560,440,984,429,689,471,613,486,1673,486" alt="Antarctica" title="Antarctica" />';
     $html .= '<area href="/wiki/Oceania" shape="poly" coords="1499,359,1488,310,1517,302,1541,281,1552,272,1575,277,1609,201,1673,213,1673,338,1673,404" alt="Oceania" title="Oceania" />';

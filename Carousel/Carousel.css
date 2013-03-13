@@ -38,9 +38,9 @@
 }
 
 .banner-box-welcome {
-    left: 5%;
+    left: 1em;
     text-align: center;
-    width: 60%;
+    width: 40%;
     white-space: nowrap;
 }
 
@@ -73,7 +73,7 @@
 }
 
 .banner-box .welcome-map-nav {
-    font-size: 1.75vw;
+    font-size: 1.25vw;
     margin-top: 1em;
 }
 
