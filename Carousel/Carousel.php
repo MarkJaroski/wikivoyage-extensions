@@ -100,7 +100,6 @@ function wfBannerRender( $input, array $args, Parser $parser, PPFrame $frame ) {
 
     $html .= "<div class='banner-box banner-box-$direction'>";
 
-    // XXX better alignment for these
     $html .= "<div class='name'>"; 
     $html .= $parser->recursiveTagParse("[[$title]]");
     $html .= "</div>";
@@ -119,7 +118,6 @@ function wfBannerRender( $input, array $args, Parser $parser, PPFrame $frame ) {
 
     $html .= "</div>"; // banner-box
 
-    // XXX incorporate Nicolas' shifting image size trick
     $html .= "<a href='' title='$title'>";
     $html .= $parser->recursiveTagParse("[[File:$image|frameless|1700px|link=$title|$title]]");
     $html .= "</a>";

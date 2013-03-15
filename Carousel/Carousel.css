@@ -16,7 +16,7 @@
 .banner-box {
     position: absolute;
     z-index: 2;
-    margin-top: 3.5vw;
+    margin-top: 2.5vw;
     color: white;
     font-weight: bold;
     width: 50%;
@@ -51,6 +51,7 @@
 .banner-box .name {
     font-size: 3vw;
     white-space: nowrap;
+    margin-bottom: .5em;
 }
 
 .banner-box .type {
@@ -60,7 +61,6 @@
 
 .banner-box .quote {
     font-size: 1.4vw;
-    margin-top: .5em;
 }
 
 .banner-box .welcome {
@@ -70,6 +70,7 @@
 .banner-box .welcome-sub {
     font-size: 1vw;
     margin-top: 1em;
+    margin-bottom: 0.5em;
 }
 
 .banner-box .welcome-map-nav {
