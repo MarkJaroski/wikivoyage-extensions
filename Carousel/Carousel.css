@@ -16,7 +16,7 @@
 .banner-box {
     position: absolute;
     z-index: 2;
-    margin-top: 2.5vw;
+    margin-top: 2.5em;
     color: white;
     font-weight: bold;
     width: 50%;
@@ -49,32 +49,56 @@
 }
 
 .banner-box .name {
-    font-size: 3vw;
+    font-size: 3em;
     white-space: nowrap;
-    margin-bottom: .5em;
+    line-height: 1.2em;
 }
 
 .banner-box .type {
-    font-size: 2vw;
-    margin-top: .5em;
+    font-size: 2em;
+    line-height: 1.2em;
+}
+
+.banner-box .stats {
+    font-size: 1.4em;
 }
 
 .banner-box .quote {
-    font-size: 1.4vw;
+    font-size: 1.2em;
 }
 
 .banner-box .welcome {
-    font-size: 3vw;
+    font-size: 3em;
+}
+
+.banner-box .nav-tip {
+    font-size: 1.5em;
 }
 
 .banner-box .welcome-sub {
-    font-size: 1vw;
-    margin-top: 1em;
-    margin-bottom: 0.5em;
+    font-size: 1em;
+/*    margin-top: 1em;*/
+/*    margin-bottom: 0.5em;*/
 }
 
 .banner-box .welcome-map-nav {
-    font-size: 1.25vw;
-    margin-top: 1em;
+    font-size: 1.25em;
+/*    margin-top: 1em;*/
+}
+
+.banner-box ul {
+    font-size: 1.25em;
+}
+
+.banner-box ul li {
+    display: inline;
+}
+
+.banner-box ul li:before {
+    content: " ⚫ ";
+}
+
+.banner-box ul li:nth-of-type(1):before {
+    content: " ";
 }
 

@@ -35,11 +35,15 @@ $wvResourceTemplate = array(
 $wgResourceModules += array(
     'ext.wv.banner' => $wvResourceTemplate + array(
         'styles' => array('Carousel.css'),
+        'scripts' => array(
+            'js/wv.textresize.js',
+        ),
     ),
     'ext.wv.worldmapnav' => $wvResourceTemplate + array(
         'scripts' => array(
             'js/jquery.rwdImageMaps.min.js',
             'js/wv.mapresize.js',
+            'js/wv.textresize.js',
         ),
         'dependancies' => array('jquery.client'),
     )
