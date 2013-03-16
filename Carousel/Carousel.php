@@ -9,7 +9,6 @@
  * @ingroup Extensions
  * @version 0.1
  * @author Mark Jaroski <mark@geekhive.net>
- * @author Nicolas ???
  * @copyright Copyright © 2013 Mark Jaroski
  * @license http://www.gnu.org/copyleft/gpl.html GNU General Public License 2.0 or later
  */
