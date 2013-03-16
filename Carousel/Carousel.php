@@ -20,8 +20,8 @@ if( !defined( 'MEDIAWIKI' ) ){
 $wgExtensionCredits['parserhook'][] = array(
 	'path'           => __FILE__,
 	'name'           => 'Carousel',
-    'author'         => '', # XXX
-	'url'            => '', # XXX
+    'author'         => 'mark@geekhive.net',
+	'url'            => 'https://github.com/MarkJaroski/wikivoyage-extensions',
 );
 
 $wgHooks['ParserFirstCallInit'][] = "wfCarouselSetHook";
